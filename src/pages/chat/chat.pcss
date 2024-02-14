@@ -1,0 +1,76 @@
+@import "../../styles/variables.pcss";
+
+.chat-wrapper {
+  display: grid;
+  grid-template-columns: 240px auto;
+  grid-template-rows: 100vh;
+
+  .chat {
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    padding: 0 10px;
+
+    &__info {
+      display: grid;
+      grid-template-columns: repeat(2, min-content) auto;
+      align-items: center;
+      border-bottom: 1px solid $base-border-color;
+      padding: 6px;
+    }
+
+    &__name {
+      margin-left: 10px;
+    }
+
+    &__menu-button {
+      margin-left: auto;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        background-color: $base-border-color;
+      }
+    }
+
+    &__messages {
+      overflow-y: auto;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__date-separator {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    &__message {
+      padding: 12px 20px;
+      background-color: #f8f8f8;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      width: fit-content;
+
+      &_my {
+        text-align: end;
+        background-color: #e4edfd;
+        align-self: flex-end;
+      }
+    }
+
+    .message {
+
+      &__time {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

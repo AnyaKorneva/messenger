@@ -1,0 +1,96 @@
+@import "variables.pcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: $color-dark;
+}
+
+button,
+p {
+  font-family: "Open Sans", sans-serif;
+  color: $color-dark;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+div,
+button,
+a,
+input {
+  box-sizing: border-box;
+}
+
+p,
+span {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+    decoration: none;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.button {
+  border-radius: 8px;
+  color: white;
+  border: none;
+  background-color: $color-blue;
+  margin-bottom: 10px;
+  padding: 12px;
+  line-height: 10px;
+  box-sizing: border-box;
+}
+
+.link {
+  color: $color-blue;
+
+  &_red {
+    color: #F00;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.navigation {
+  width: fit-content;
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}

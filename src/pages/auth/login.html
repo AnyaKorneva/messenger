@@ -1,0 +1,14 @@
+{{> layouts/Layout title="Login Page"}}
+<main class="auth-wrapper">
+  <h1>Вход</h1>
+  <form class="form">
+    {{> Input/Input class="form__input" label="Логин" type="text" name="login" }}
+    {{> Input/Input class="form__input" label="Пароль" type="password" name="password" }}
+    {{> Button/Button label="Авторизоваться" class="button" type="submit" }}
+    <a href="register.html" class="link center">Нет аккаунта?</a>
+  </form>
+</main>
+
+<script type="module">
+  import "./auth.pcss";
+</script>

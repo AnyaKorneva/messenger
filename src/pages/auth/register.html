@@ -1,0 +1,19 @@
+{{> layouts/Layout title="Register Page"}}
+<main class="auth-wrapper">
+  <h1>Регистрация</h1>
+  <form class="form">
+    {{> Input/Input class="form__input" label="Почта"  type="email" name="email" }}
+    {{> Input/Input class="form__input" label="Логин" type="text" name="login" }}
+    {{> Input/Input class="form__input" label="Имя" type="text" name="first_name" }}
+    {{> Input/Input class="form__input" label="Фамилия" type="text" name="second_name" }}
+    {{> Input/Input class="form__input" label="Телефон" type="tel" name="phone" }}
+    {{> Input/Input class="form__input" label="Пароль" type="password" name="password" }}
+    {{> Input/Input class="form__input" label="Пароль (ещё раз)" type="password" name="password" }}
+    {{> Button/Button label="Зарегистрироваться" class="button" type="submit" }}
+    <a href="login.html" class="link center">Вход</a>
+  </form>
+</main>
+
+<script type="module">
+  import "./auth.pcss";
+</script>

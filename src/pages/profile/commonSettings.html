@@ -1,0 +1,23 @@
+{{> layouts/Layout title="Profile Page"}}
+<div class="profile-wrapper">
+  <a class="back-button" href="../../index.html"><img src="/back.svg" alt="Стрелка назад"/></a>
+  <main class="settings">
+    <form>
+      {{> Avatar/Avatar src="/avatar.png" isBig=true canEdit=true }}
+      <div class="settings__form">
+        {{> Input/Input label="Почта" placeholder="test@yandex.ru" type="email" name="email" }}
+        {{> Input/Input label="Логин" placeholder="User" type="text" name="login" }}
+        {{> Input/Input label="Имя" placeholder="First name" type="text" name="first_name" }}
+        {{> Input/Input label="Фамилия" placeholder="Second name" type="text" name="second_name" }}
+        {{> Input/Input label="Имя в чате" placeholder="Displayed name" type="text" name="display_name" }}
+        {{> Input/Input label="Телефон" placeholder="+7 (909) 777 77 77" type="tel" name="phone" }}
+        {{> Button/Button label="Сохранить" class="button" type="submit" }}
+      </div>
+    </form>
+  </main>
+</div>
+
+<script type="module">
+  import "./profile.pcss";
+  import "../../components/Avatar/avatar.pcss";
+</script>

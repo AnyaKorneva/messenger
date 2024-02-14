@@ -1,0 +1,39 @@
+@import "../../styles/variables.pcss";
+
+.auth-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.14);
+  padding: 24px;
+  width: 350px;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__input {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      input {
+        margin: 6px 0;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $color-blue;
+      }
+    }
+  }
+}

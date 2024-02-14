@@ -1,0 +1,31 @@
+{{>layouts/Layout title="Profile page"}}
+<div class="profile-wrapper">
+  <a class="back-button" href="../../index.html"><img src="/back.svg" alt="Стрелка назад"/></a>
+  <main class="profile">
+    {{> Avatar/Avatar src="/avatar-current-user.svg" isBig=true canEdit=false }}
+    <h1 class="profile__login">Пользователь</h1>
+    <ul class="profile__info">
+      {{#each profileInfo}}
+        {{> ProfileItem/ProfileItem}}
+      {{/each}}
+    </ul>
+    <nav class="profile__nav">
+      <ul>
+        <li>
+          <a class="link" href="./commonSettings.html">Изменить данные</a>
+        </li>
+        <li>
+          <a class="link" href="./passwordSettings.html">Изменить пароль</a>
+        </li>
+        <li>
+          <a class="link link_red" href="../auth/login.html">Выйти</a>
+        </li>
+      </ul>
+    </nav>
+  </main>
+</div>
+
+<script type="module">
+  import "./profile.pcss";
+  import "../../components/Avatar/avatar.pcss";
+</script>
