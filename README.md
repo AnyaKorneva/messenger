@@ -16,11 +16,11 @@
 «[Сайт](https://radiant-torrone-947359.netlify.app/)»
 
 Страницы:
-«[Ошибка 404](https://radiant-torrone-947359.netlify.app/pages/error/404)»,
-«[Ошибка 500](https://radiant-torrone-947359.netlify.app/pages/error/500)»,
-«[Вход](https://radiant-torrone-947359.netlify.app/pages/auth/login.html)»,
-«[Регистрация](https://radiant-torrone-947359.netlify.app/pages/auth/register.html)»,
-«[Профиль](https://radiant-torrone-947359.netlify.app/pages/profile/profile.html)»,
-«[Изменение данных пользователя](https://radiant-torrone-947359.netlify.app/pages/profile/commonSettings.html)»,
-«[Изменение пароля](https://radiant-torrone-947359.netlify.app/pages/profile/passwordSettings.html)»,
-«[Чат](https://radiant-torrone-947359.netlify.app/pages/chat/chat.html)»,
+- «[Ошибка 404](https://radiant-torrone-947359.netlify.app/pages/error/404)»,
+- «[Ошибка 500](https://radiant-torrone-947359.netlify.app/pages/error/500)»,
+- «[Вход](https://radiant-torrone-947359.netlify.app/pages/auth/login.html)»,
+- «[Регистрация](https://radiant-torrone-947359.netlify.app/pages/auth/register.html)»,
+- «[Профиль](https://radiant-torrone-947359.netlify.app/pages/profile/profile.html)»,
+- «[Изменение данных пользователя](https://radiant-torrone-947359.netlify.app/pages/profile/commonSettings.html)»,
+- «[Изменение пароля](https://radiant-torrone-947359.netlify.app/pages/profile/passwordSettings.html)»,
+- «[Чат](https://radiant-torrone-947359.netlify.app/pages/chat/chat.html)»,
