@@ -23,4 +23,4 @@
 - «[Профиль](https://radiant-torrone-947359.netlify.app/profile)»,
 - «[Изменение данных пользователя](https://radiant-torrone-947359.netlify.app/commonSettings)»,
 - «[Изменение пароля](https://radiant-torrone-947359.netlify.app/passwordSettings)»,
-- «[Чат](https://radiant-torrone-947359.netlify.app/pages/chat/chat)»,
+- «[Чат](https://radiant-torrone-947359.netlify.app/chat)»,
