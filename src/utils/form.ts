@@ -19,7 +19,8 @@ const removeError = (el: HTMLInputElement) => {
   }
 };
 
-const validateField = (element: HTMLInputElement, value: string) => {
+export const validateField = (element: HTMLInputElement) => {
+  const { value } = element;
   if (!value && !element.required) {
     return;
   }
@@ -35,16 +36,6 @@ const validateField = (element: HTMLInputElement, value: string) => {
   }
 };
 
-export const inputEventListeners = (element: HTMLInputElement) => {
-  element.addEventListener('blur', (e: FocusEvent) => {
-    validateField(element, (e.target as HTMLInputElement).value);
-  });
-
-  element.addEventListener('input', (e: Event) => {
-    validateField(element, (e.target as HTMLInputElement).value);
-  });
-};
-
 export const submitForm = (form: HTMLElement) => {
   const inputs = form.querySelectorAll('input');
 
@@ -53,7 +44,7 @@ export const submitForm = (form: HTMLElement) => {
   inputs.forEach((input) => {
     const element: HTMLInputElement = input;
 
-    validateField(element, element.value);
+    validateField(element);
     const isInvalid = element.classList.contains(errorClass);
     if (!isInvalid && element) {
       formData[element.name] = element.value;

@@ -3,7 +3,7 @@ import Input from '../../components/Input';
 import Avatar from '../../components/Avatar';
 import Link from '../../components/Link';
 import PasswordSettings from './PasswordSettings';
-import { inputEventListeners, submitForm } from '../../utils/form';
+import { submitForm, validateField } from '../../utils/form';
 import { formIds, routes, FixLater } from '../../constants';
 
 const data = [
@@ -17,9 +17,10 @@ const inputs = data.map((item) => {
   return new Input('label', {
     ...item,
     id: name,
-    withError: false,
+    withError: true,
     events: {
-      click: (event: MouseEvent) => inputEventListeners(event.target as HTMLInputElement),
+      input: (event: Event) => validateField(event.target as HTMLInputElement),
+      blur: (event: FocusEvent) => validateField(event.target as HTMLInputElement),
     },
   });
 });

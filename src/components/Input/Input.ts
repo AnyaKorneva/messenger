@@ -11,7 +11,8 @@ interface Props {
   required?: boolean;
   withError: boolean;
   events: {
-    click: (event: MouseEvent) => void;
+    input: (event: MouseEvent) => void;
+    blur: (event: MouseEvent) => void;
   };
 }
 

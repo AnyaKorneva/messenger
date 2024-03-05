@@ -20,14 +20,24 @@ function queryStringify(data: Record<string, unknown>) {
     .join('&');
 }
 
+type HTTPMethod = (url: string, options?: OptionsType) => Promise<unknown>
+
 export default class HTTPTransport {
-  get = (url: string, options: OptionsType = {} as OptionsType) => this.request(url, { ...options, method: METHODS.GET }, options.timeout);
+  get: HTTPMethod = (url, options) => (
+    this.request(url, { ...options, method: METHODS.GET }, options?.timeout)
+  );
 
-  put = (url: string, options: OptionsType = {} as OptionsType) => this.request(url, { ...options, method: METHODS.PUT }, options.timeout);
+  put: HTTPMethod = (url, options) => (
+    this.request(url, { ...options, method: METHODS.PUT }, options?.timeout)
+  );
 
-  post = (url: string, options: OptionsType = {} as OptionsType) => this.request(url, { ...options, method: METHODS.POST }, options.timeout);
+  post: HTTPMethod = (url, options) => (
+    this.request(url, { ...options, method: METHODS.POST }, options?.timeout)
+  );
 
-  delete = (url: string, options: OptionsType = {} as OptionsType) => this.request(url, { ...options, method: METHODS.DELETE }, options.timeout);
+  delete: HTTPMethod = (url, options) => (
+    this.request(url, { ...options, method: METHODS.DELETE }, options?.timeout)
+  );
 
   request = (
     url: string,

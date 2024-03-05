@@ -5,7 +5,7 @@ import Input from '../../components/Input';
 import Link from '../../components/Link';
 import ChatPreview from '../../components/ChatPreview';
 import { formIds, routes, FixLater } from '../../constants';
-import { submitForm } from '../../utils/form';
+import { submitForm, validateField } from '../../utils/form';
 import currentChatData from '../../mocks/messages';
 import chatsData from '../../mocks/previews';
 import Chat from './Chat';
@@ -58,11 +58,8 @@ const messageInput = new Input('label', {
   value: '',
   name: 'message',
   events: {
-    input: (event: InputEvent) => {
-      console.log({
-        tap: (event.target as HTMLInputElement).value,
-      });
-    },
+    input: (event: Event) => validateField(event.target as HTMLInputElement),
+    blur: (event: FocusEvent) => validateField(event.target as HTMLInputElement),
   },
 });
 

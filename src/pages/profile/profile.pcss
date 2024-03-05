@@ -80,17 +80,22 @@
 
         display: flex;
         justify-content: space-between;
-        padding: 6px;
+        padding: 16px 6px;
         margin-bottom: 6px;
+        position: relative;
 
         input {
           border: none;
           text-align: right;
           outline: none;
+          min-width: 200px
+        }
 
-          &.invalid {
-            border-bottom:1px solid red;
-          }
+        .error {
+          font-size: 10px;
+          color: red;
+          position: absolute;
+          bottom: 2px;
         }
       }
 

@@ -2,7 +2,7 @@ import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Link from '../../components/Link';
 import Registration from './Registation';
-import { inputEventListeners, submitForm } from '../../utils/form';
+import { submitForm, validateField } from '../../utils/form';
 import { formIds, routes, FixLater } from '../../constants';
 
 const data = [
@@ -23,7 +23,8 @@ const inputs = data.map((item) => {
     id: name,
     withError: true,
     events: {
-      click: (event: MouseEvent) => inputEventListeners(event.target as HTMLInputElement),
+      input: (event: Event) => validateField(event.target as HTMLInputElement),
+      blur: (event: FocusEvent) => validateField(event.target as HTMLInputElement),
     },
   });
 });

@@ -3,7 +3,7 @@ import Input from '../../components/Input';
 import Link from '../../components/Link';
 import Auth from './Auth';
 import { formIds, routes } from '../../constants';
-import { inputEventListeners, submitForm } from '../../utils/form';
+import { validateField, submitForm } from '../../utils/form';
 
 const data = [
   { type: 'text', label: 'Логин', name: 'login', required: true, value: '' },
@@ -18,7 +18,8 @@ const inputs = data.map((item) => {
     id: name,
     withError: true,
     events: {
-      click: (event: MouseEvent) => inputEventListeners(event.target as HTMLInputElement),
+      input: (event: Event) => validateField(event.target as HTMLInputElement),
+      blur: (event: FocusEvent) => validateField(event.target as HTMLInputElement),
     },
   });
 
